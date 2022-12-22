@@ -1,0 +1,668 @@
+:root {
+    --main-color: #7451EB;
+    --main-color-opacity: rgba(116, 81, 235, 0.80);
+    --max-width: 1168px;
+    --text-second-color: rgba(39, 26, 56, 0.73);
+    --border: 1px solid rgba(39, 26, 56, 0.18);
+    --text-title-color: #271a38;
+    --main-background-color: white;
+    --button-color-overview: rgba(116, 81, 235, 0.30)
+}
+
+* {
+    font-family: Inter, Inter-Regular, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 0;
+    color: var(--text-second-color);
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrap {
+    margin: auto;
+    width: var(--max-width);
+}
+
+.title-style {
+    color: var(--text-title-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/*-------------------------Informations-------------------------*/
+.openclassrooms {
+    width: 235px;
+}
+
+.information {
+    background-color: #9cc7f2;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+}
+
+.information > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.information > div > a {
+    padding: 13px 16px 6px 16px;
+    font-size: 16px;
+}
+
+.information > div > a:hover {
+    border-radius: 5px;
+    background-color: var(--main-background-color);
+    transition: background-color ease-in-out 0.2s;
+}
+
+.information > div > p {
+    padding: 14px 0 10px 0;
+}
+
+/*-------------------------Nav barre-------------------------*/
+
+nav img {
+    padding: 10px 20px 10px 0;
+}
+
+nav a, nav button * {
+    text-decoration: none;
+}
+
+nav a:hover, nav button:hover * {
+    color: var(--main-color) !important;
+}
+
+.container-navig {
+    background: var(--main-background-color);
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    border-bottom: var(--border);
+}
+
+.navig {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 63px;
+}
+
+.navig > div:last-child {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.login {
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    padding: 11px 18px;
+    margin-left: 1.8rem;
+}
+
+.login:hover {
+    background-color: var(--button-color-overview);
+    transition: all ease-in-out 0.2s;
+}
+
+.navig > div {
+    display: flex;
+    align-items: center;
+}
+
+.container-link a {
+    padding: 0 10px 0 10px;
+}
+
+.container-link a:last-child {
+    margin: 15px;
+    padding: 7px 20px 7px 20px;
+    border-left: var(--border);
+}
+
+#formations {
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.active * {
+    color: var(--main-color);
+}
+
+#dropdown {
+    transition: all ease-in-out 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    margin-top: 120px;
+    z-index: 1;
+}
+
+#dropdown > div {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+
+    align-items: flex-start;
+    margin: auto;
+    gap: 48px;
+}
+
+#dropdown > div:first-child {
+    display: flex;
+    z-index: 2;
+}
+
+#dropdown h2 {
+    margin: 0.8rem 0 0.3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dropdown p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+#dropdown > div > div:first-child {
+    min-width: 178px;
+}
+
+#dropdown > div > div:last-child {
+    display: flex;
+    margin-right: 200px;
+    padding: 0.5rem 1rem 1rem 0.5rem;
+}
+
+#dropdown > div > div:last-child h2 {
+    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.options-formation {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 10px 20px 20px;
+    border-radius: 10px;
+}
+
+.options-formation:hover {
+    background-color: rgba(116, 81, 235, 0.12)
+}
+
+.options-formation i {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--main-color);
+    background-color: rgba(116, 81, 235, 0.12);
+}
+
+.options-formation:hover i {
+    background-color: white;
+}
+
+#dropdown > div > div:last-child > div {
+    margin: 0 16px 0 8px;
+    border-right: var(--border);
+}
+
+.block {
+    background-color: black;
+    width: 100%;
+    height: 200vh;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.invisible {
+    opacity: 0;
+    margin-top: 0 !important;
+}
+
+.invisible > div:last-child {
+    display: none;
+}
+
+/*-------------------------Presentation-------------------------*/
+.presentation {
+    margin-top: 120px;
+    color: #FFFAEE;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.presentation > div {
+    height: 416px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentation h1 {
+    font-size: 2.5rem;
+    padding-bottom: 16px;
+    color: var(--main-background-color);
+}
+
+.presentation p {
+    margin-bottom: 16px;
+    color: var(--main-background-color);
+}
+
+#texte-accueil {
+    padding: 20px;
+}
+
+#image-accueil {
+    height: 416px;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 16px;
+    margin-top: 16px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: var(--main-color);
+    background-color: var(--main-background-color);
+    border: 1px solid var(--main-background-color);
+}
+
+.button:hover {
+    box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0, rgb(0 0 0 / 12%) 0 1px 10px 0;
+    transition: box-shadow ease-in-out 0.15s;
+}
+
+.button-inversed {
+    color: var(--main-background-color);
+    background-color: var(--main-color);
+}
+
+.button-inversed:hover {
+    box-shadow: none;
+    background-color: rgba(238, 233, 253, 0.3);
+    transition: background-color ease-in-out 0.15s;
+}
+
+.container-hero .container-button {
+    display: flex;
+}
+
+/*-------------------------Presentation 2-------------------------*/
+
+.presentation2 {
+    padding: 24px 0 72px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.presentation2 div {
+    text-align: center;
+    line-height: 1.75rem;
+    max-width: 370px;
+    color: var(--text-title-color);
+    padding-bottom: 32px;
+}
+
+.presentation2 h2 {
+    font-size: 1.25rem;
+}
+
+/*-------------------------Presentation 3-------------------------*/
+
+.presentation3 {
+    padding: 72px 0;
+    background: rgb(255, 250, 238);
+}
+
+.presentation3 a:hover {
+    text-decoration: none;
+}
+
+.presentation3 > div {
+    display: flex;
+    gap: 20px;
+}
+
+.presentation3 p {
+    line-height: 25px;
+}
+
+.presentation3 h2 {
+    font-size: 2rem;
+    padding: 5px 15px;
+    margin-bottom: 16px;
+    background-color: var(--main-color-opacity);
+    color: var(--main-background-color);
+}
+
+.presentation3 > div > div > div {
+    display: flex;
+}
+
+/*-------------------------Ask-for-help-------------------------*/
+
+.ask-for-help {
+    display: flex;
+    align-items: center;
+    gap: 62px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.ask-for-help h2, .ask-for-help p {
+    margin-bottom: 16px;
+}
+
+.ask-for-help p {
+    line-height: 26px;
+}
+
+.ask-for-help > div:last-child > div {
+    display: flex;
+}
+
+.ask-for-help > div > div > div {
+    margin: 0 8px 0 8px;
+    border-right: 1px solid var(--main-color);
+}
+
+.button-help, .button-help i {
+    color: var(--main-color);
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.button-help {
+    padding: 9px 16px;
+    border-radius: 5px;
+}
+
+.button-help i {
+    padding-right: 4px;
+}
+
+.button-help:hover {
+    background-color: var(--button-color-overview);
+}
+
+/*-------------------------Témoignage-------------------------*/
+
+.temoignage {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.temoignage > div {
+    margin: 0 100px;
+}
+
+.etudiants {
+    display: flex;
+}
+
+.etudiant {
+    height: 316px;
+    min-width: 968px;
+    display: flex;
+    line-height: 26px;
+}
+
+.etudiant p {
+    padding-bottom: 24px;
+}
+
+.etudiant h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.etudiant-display {
+    display: none;
+}
+
+.temoignage img {
+    width: 368px;
+    margin-right: 24px;
+}
+
+.temoignage h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.button-video {
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 14px 16px;
+}
+
+.button-video i {
+    color: var(--main-color);
+    font-size: 20px;
+    padding-right: 6.5px;
+    vertical-align: -17%;
+}
+
+.button-video:hover {
+    transition: background-color ease-in-out 0.2s;
+    background-color: var(--button-color-overview);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0 32px 0;
+}
+
+.navbar button{
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.circle{
+    font-size: 0.45rem;
+    color: var(--button-color-overview);
+}
+
+.circle-color{
+    color: var(--main-color);
+}
+
+
+/*-------------------------Astérisque-------------------------*/
+
+.asterisque {
+    justify-content: center;
+    line-height: 22px;
+    padding: 8px 0;
+}
+
+.asterisque * {
+    font-size: 0.875rem;
+}
+
+.asterisque a {
+    text-decoration: underline;
+}
+
+.asterisque a, .asterisque i {
+    color: var(--text-title-color);
+}
+
+.asterisque a:hover {
+    color: var(--main-color);
+}
+
+/*-------------------------Footer-------------------------*/
+
+footer {
+    border-top: var(--border);
+    padding: 24px 0 40px 0;
+    line-height: 2.4rem;
+}
+
+footer h3 {
+    font-weight: 550;
+    font-size: 12px !important;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer a {
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: var(--main-color);
+}
+
+footer > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer select {
+    width: 200px;
+    font-size: 1.2rem;
+}
+
+footer > div > div:last-child > div:first-child {
+    display: flex;
+    gap: 5px;
+}
+
+footer > div > div:last-child > div:nth-child(2) {
+    display: flex;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+footer > div > div:last-child > div:last-child img {
+    width: 150px;
+}
+
+.help {
+    padding-top: 1rem;
+}
+
+.redirection {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.redirection:hover {
+    background-color: rgba(116, 81, 235, 0.12);
+    color: var(--main-color) !important;
+}
+
+.help ul {
+    padding-top: 10px;
+    display: flex;
+}
+
+.help i {
+    font-size: 1.2rem;
+}
+
+.help li {
+    padding: 0 8px;
+}
+
+.centered-icon {
+    border-right: 1px solid #dad9dc;
+    border-left: 1px solid #dad9dc;
+}
+
+.icon-footer {
+    font-size: 1.2rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-link-footer {
+    padding-left: 4px;
+    font-size: 0.8rem;
+}
+
+.icon-media-footer {
+    padding-left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--text-title-color);
+    color: var(--text-title-color);
+}
+
+.icon-media-footer:hover {
+    border-color: var(--main-background-color);
+    color: var(--main-background-color);
+}
+
+.one:hover {
+    background-color: #1877F2;
+}
+
+.two:hover {
+    background-color: #03d0fc;
+}
+
+.three:hover {
+    background-color: #03d0fc;
+}
+
+.four:hover {
+    background: linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
+}
+
+.five:hover {
+    background-color: #FF0000;
+}
+
+
+
+
